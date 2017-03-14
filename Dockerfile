@@ -18,13 +18,14 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-FROM jfloff/alpine-python:2.7-slim
+FROM jfloff/alpine-python:2.7
 MAINTAINER Martin Donath <martin.donath@squidfunk.com>
 
 # Set build directory
 WORKDIR /tmp
 
-RUN apk add --update python2-dev 
+RUN apk update; \
+    apk add python2-dev 
 
 # Install dependencies
 COPY requirements.txt .
