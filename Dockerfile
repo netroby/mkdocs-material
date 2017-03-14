@@ -31,6 +31,7 @@ RUN apk update; \
 COPY requirements.txt .
 RUN \
   pip install -r requirements.txt && \
+  pip install mkdocs-material && \
   rm requirements.txt
 
 # Copy files necessary for build
