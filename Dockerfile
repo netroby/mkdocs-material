@@ -24,6 +24,8 @@ MAINTAINER Martin Donath <martin.donath@squidfunk.com>
 # Set build directory
 WORKDIR /tmp
 
+RUN apk add --update python2-dev 
+
 # Install dependencies
 COPY requirements.txt .
 RUN \
